@@ -9,3 +9,8 @@
 1. First you should ask in #dev in the Cult of Coders Slack Team
 2. Go to https://www.reddit.com/r/typescript/, some problems are very specific and it's hard to find them, the guys lurking there are helpful and smart
 3. Stack overflow, ofcourse
+
+## Tips
+
+1. Avoid any, use unknown
+2. Avoid unions and overloading of functions

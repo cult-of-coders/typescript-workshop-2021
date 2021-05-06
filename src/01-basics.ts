@@ -1,4 +1,4 @@
-// primitives: string, number, boolean, object, Function, Array<type>
+// primitives: string, number, boolean, object, function, array
 
 // automatically assigns the type based on the initialisation value
 let hello = "Hello world";

@@ -6,6 +6,7 @@ This represents the source code for our TypeScript Workshop at Cult of Coders he
 
 ```
 npm install -g ts-node
+npm install
 ```
 
 ## Execution

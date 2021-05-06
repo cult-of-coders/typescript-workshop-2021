@@ -80,4 +80,5 @@ const userPriorities: UserSearchPreference<User> = {
   age: 10,
 };
 
-// ^ This will fail if you ommit a specific key. How should we do it if we want to only specify a subset of keys?
+// ^ This will fail if you ommit a specific key.
+// EXERCISE: How should we do it if we want to only specify a subset of keys?
