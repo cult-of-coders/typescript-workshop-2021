@@ -18,11 +18,11 @@ interface IDataBaseConfig {
 
 // how can we do it in such a way that we have uri as string, and any other key as number?
 
-interface BaseConfig {
+interface IBaseConfig {
   uri: string;
 }
 
-interface ExtendedConfig extends BaseConfig {
+interface IExtendedConfig extends IBaseConfig {
   // @ts-expect-error
   [key: string]: number;
 }
@@ -60,6 +60,9 @@ const example: NestedCSS = {
     color: "blue",
     ".othersubclass": {
       color: "pink",
+      asfasf: {
+        color: "abc",
+      },
     },
   },
 };

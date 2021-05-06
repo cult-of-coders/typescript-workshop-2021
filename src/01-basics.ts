@@ -27,12 +27,11 @@ let something: unknown = 123;
 
 // @ts-expect-error
 something.toFixed(2);
+
 // nothing will work with it unless you cast it
 
 // casting the type
 (something as number).toFixed(2);
-// @ts-expect-error
-something.toFixed(2);
 
 /**
  * ARRAYS
@@ -85,5 +84,6 @@ enum MusicalTypes2 {
 MusicalTypes2.ROCK; // "rock"
 
 let musicalType: MusicalTypes2 = MusicalTypes2.ROCK;
+
 // @ts-expect-error
 let musicalType2: MusicalTypes2 = "rock";

@@ -35,6 +35,7 @@ sample = {
 
 /**
  * INTERFACES
+ *
  */
 
 interface IDeveloper {
@@ -53,6 +54,7 @@ interface IMyType {
 }
 
 type ExtendedMyType = MyType & { b: number };
+
 interface IExtendedMyType extends IMyType {
   b: number;
 }
@@ -91,6 +93,4 @@ const arr: IMyType[] = [
  * STRING TYPES
  */
 type Color = "red" | "blue" | "green";
-
-// @ts-expect-error
-const red: Color = "redx";
+const red: Color = "red";

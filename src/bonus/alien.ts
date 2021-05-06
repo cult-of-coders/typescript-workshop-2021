@@ -32,9 +32,6 @@ type DBv1 = typeof simpsons;
 // query as first type parameter, and a database as the second.
 // Note that all SQL keywords are UPPERCASE.
 type EX1 = Query<
-  "SELECT firstName, lastName FROM people WHERE lastName = 'Simpson'",
+  "SELECT firstName AS fn, lastName, isChild FROM people WHERE lastName = 'Simpson'",
   DBv1
 >;
-
-let a;
-(a as EX1)[0].firstName;

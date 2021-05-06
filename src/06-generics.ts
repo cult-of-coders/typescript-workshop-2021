@@ -7,11 +7,9 @@ function identity<T>(value: T): T {
   return value;
 }
 
-let output;
-output = identity<string>("test");
-output = identity("test");
-// @ts-expect-error
-output = identity<number>("test");
+const output1 = identity<string>("test");
+const output2 = identity("test");
+const output3 = identity<number>(123);
 
 // let's talk about real use case
 // you can default types to other things
@@ -69,5 +67,6 @@ const loader = new RestLoader<IUser>();
 const userLoaded = loader.results[0];
 
 class UserLoader extends RestLoader<IUser> {}
+
 const loader2 = new UserLoader();
 const userLoaded2 = loader.results[0];

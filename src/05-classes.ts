@@ -43,6 +43,15 @@ class User3 {
     public readonly firstName: string,
     public readonly lastName: string
   ) {}
+
+  async init() {
+    // a
+    // aslkf laskf
+    // alsjflaks f
+    this.initTheirAccount();
+  }
+
+  protected initTheirAccount() {}
 }
 
 const user3 = new User3("Florin", "Cercel");

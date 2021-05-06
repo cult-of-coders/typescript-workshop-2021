@@ -38,7 +38,6 @@ class A {
 
 // Show case typeof or without typeof
 function perform(value: typeof A) {
-  //
   value.saySomethingStatic();
 
   let newValue: InstanceType<typeof value> = new A();
@@ -67,14 +66,19 @@ class User {
 }
 
 type K1 = keyof User; // "firstName" | "lastName" | "age"
+type K1Verbose = "firstName" | "lastName" | "age";
 type K2 = keyof User[]; // "length" | "push" | "pop" | "concat" | ...
-type K3 = keyof { [x: string]: User }; // string
+type K3 = keyof { [key: string]: User }; // string
 
-type UserSearchPreference<T> = {
+type SearchPreference<T> = {
   [key in keyof T]: number;
 };
 
-const userPriorities: UserSearchPreference<User> = {
+type SearchPreferenceOptionalSome<T> = {
+  [key in keyof T]?: number;
+};
+
+const userPriorities: SearchPreference<User> = {
   firstName: 10,
   lastName: 10,
   age: 10,

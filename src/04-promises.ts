@@ -55,15 +55,20 @@ async function sleepDemo() {
   console.log("Ok, I'm fresh, let's code.");
 }
 
+class NetworkError extends Error {}
+
 async function errorHandling() {
   const failurePromise = new Promise((resolve, reject) => {
-    reject(123);
+    reject(new NetworkError());
   });
 
   try {
     // note, I'm awaiting a promise, this makes sense.
     await failurePromise;
   } catch (e) {
+    if (e instanceof NetworkError) {
+      // do something with it
+    }
     console.log(e);
   }
 }
